@@ -1,0 +1,41 @@
+class Soldado {
+    int codigoSoldado;
+    String nombre;
+    String apellido1;
+    String apellido2;
+    String graduacion;
+}
+
+class Cuartel {
+    int codigoCuartel;
+    String nombre;
+    String ubicacion;
+}
+
+class Cuerpo {
+    int codigCuerpo;
+    String denominacion;
+}
+
+class Compañia {
+    int num_compañia;
+    String Actividad;
+}
+
+class Servicio {
+    String tipo;
+    String descripcion;
+    int codigo;
+}
+
+class SoldadoServicio {
+    Date fechaRealizacion;
+}
+
+Soldado --|> Compañia : pertenece a
+Soldado --|> Cuerpo : pertenece a
+Soldado --|> Cuartel : está en
+Soldado --|> SoldadoServicio : realiza
+Servicio --|> SoldadoServicio : tiene
+Cuartel --|> Compañia : alberga
+Compañia --|> Cuartel : ubicado en
